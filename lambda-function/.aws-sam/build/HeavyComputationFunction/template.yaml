@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Heavy computation Lambda function
+
+Resources:
+  HeavyComputationFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda_function.handler
+      Runtime: nodejs20.x
+      CodeUri: ./
+      MemorySize: 1024
+      Timeout: 30
+
+Outputs:
+  HeavyComputationFunction:
+    Description: 'Heavy Computation Lambda Function ARN'
+    Value: !GetAtt HeavyComputationFunction.Arn
+    Export:
+      Name: HeavyComputationFunctionArn

@@ -1,0 +1,16 @@
+{
+  "name": "benchmark-function",
+  "version": "1.0.0",
+  "description": "Benchmark function for GCP",
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "start": "functions-framework --target=benchmarkFunction",
+    "build": "npm install && npm prune --production"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0"
+  }
+}
